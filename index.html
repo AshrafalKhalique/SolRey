@@ -708,7 +708,8 @@ function switchTheme(ev){const next=isDark()?"light":"dark";try{localStorage.set
 (function(){let t=null;try{t=localStorage.getItem(TKEY);}catch(e){}applyTheme(t);if(MQ&&MQ.addEventListener)MQ.addEventListener("change",themeButton);})();
 /* ------------------------------------------------------------------ team */
 const TEAM=[
- {name:"Ashraf Al-Khalique",role:"",link:"https://github.com/AshrafalKhalique",label:"github.com/AshrafalKhalique"}];
+ {name:"Ashraf Al-Khalique",role:"",link:"https://github.com/AshrafalKhalique",label:"github.com/AshrafalKhalique"},
+{name:"Nushin Nawar",role:""}];
 function route(){const h=location.hash.slice(1);tab=TABS.some(t=>t[0]===h)?h:"overview";render();window.scrollTo(0,0);}
 window.addEventListener("hashchange",route);
 load();route();
