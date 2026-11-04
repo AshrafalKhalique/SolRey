@@ -643,7 +643,7 @@ V.pvsyst=()=>`${head("PVsyst <em>export</em>","Values to enter in PVsyst: Orient
  <li>Vmp temperature coefficient is estimated (−0.335 %/°C); confirm against the official module datasheet.</li>
  <li>Bifacial gain counts only if PVsyst's bifacial model is enabled with mounting height (≥ 1.2 m), row pitch and albedo.</li>
  <li>Inverter rows marked VERIFY have conflicting datasheet editions; confirm with the vendor.</li></ul></section>`;
-V.team=()=>`${head("About the <em>team</em>","The people behind this tool and the rooftop solar feasibility study for government educational institutions in Bangladesh.")}
+V.team=()=>`${head("About the <em>team</em>","Meet the minds behind the platform.")}
  <div data-dyn="team"></div>`;
 V.library=()=>{const s=st();return `${head("Component <em>library</em>","Edits apply to this site only. Use Duplicate to start a new site from an edited library.")}
  <section class="panel"><h3>Inverter library</h3><div class="scroll"><table class="edit" style="min-width:1250px"><thead><tr><th>Brand</th><th>Model</th><th>Phase</th><th class="n">AC kW</th><th class="n">Abs. max V</th><th class="n">MPPT min V</th><th class="n">MPPT max V</th><th class="n">MPPTs</th><th class="n">Strings / MPPT</th><th class="n">Max A / MPPT</th><th class="n">Max Isc / MPPT</th><th>Include</th><th>Verification</th><th>Check</th><th></th></tr></thead><tbody>
@@ -813,8 +813,8 @@ function switchTheme(ev){const next=isDark()?"light":"dark";try{localStorage.set
 (function(){let t=null;try{t=localStorage.getItem(TKEY);}catch(e){}applyTheme(t);if(MQ&&MQ.addEventListener)MQ.addEventListener("change",themeButton);})();
 /* ------------------------------------------------------------------ team */
 const TEAM=[
- {name:"Ashraf Al-Khalique",role:"",link:"https://github.com/AshrafalKhalique",label:"github.com/AshrafalKhalique"},
- {name:"Nushin Nawar",role:""}];
+ {name:"AK",role:"",link:"https://github.com/AshrafalKhalique",label:"github.com/AshrafalKhalique"},
+ {name:"NN",role:""}];
 function route(){const h=location.hash.slice(1);tab=TABS.some(t=>t[0]===h)?h:"overview";render();window.scrollTo(0,0);}
 window.addEventListener("hashchange",route);
 load();route();
